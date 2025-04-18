@@ -58,7 +58,7 @@ public class TimHeader
 		}
 
 		var paletteSize = timHeader.Offset & ~DefaultPaletteOffset;
-		var validPaletteSize = (paletteSize == 0 || paletteSize == timHeader.ExpectedPaletteSize());
+		var validPaletteSize = paletteSize == 0 || paletteSize == timHeader.ExpectedPaletteSize();
 
 		if (timHeader.Magic == 0x10 && validPaletteSize)
 		{
