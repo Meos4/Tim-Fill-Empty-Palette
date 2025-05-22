@@ -26,7 +26,7 @@ public class TimHeader
 	{
 		return paletteType switch
 		{
-			(uint)PaletteType._4Bits => 16,
+			(uint)PaletteType._4Bits => 32,
 			(uint)PaletteType._8Bits => 512,
 			_ => throw new ArgumentOutOfRangeException(nameof(paletteType), "Unknown palette type.")
 		};
